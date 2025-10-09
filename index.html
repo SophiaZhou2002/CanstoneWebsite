@@ -16,15 +16,19 @@
 
       <div class = "overlay"> </div>
     
-    <nav class="navbar">
-      <div class="logo">Canstone</div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+      
+      <nav class="navbar">
+        <div class="logo">Canstone</div>
+      
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+      
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
 
     <div class="hero-content">
       <h1>Custom Home Builder</h1>
@@ -141,7 +145,7 @@
           +1 604.763.2451<br>
           info@canstonedevelopment.com
         </p>
-        <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <form class="contact-form" action="https://formspree.io/f/xnnggnzp" method="POST">
           <input type="text" name="name" placeholder="Name" required>
           <input type="text" name="phone" placeholder="Phone Number" required>
           <input type="email" name="email" placeholder="Email Address" required>
@@ -177,6 +181,12 @@
     } else {
       navbar.classList.remove('scrolled');
     }
+  });
+  const toggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
   });
 
   </script>
